@@ -1,7 +1,5 @@
 package com.net.parking.service.impl;
 
-import java.io.FileInputStream;
-import java.io.InputStream;
 import java.util.Properties;
 
 import javax.mail.Message;
@@ -22,22 +20,22 @@ public class EmailServiceImpl implements EmailService {
 
 	private static final Logger logger = Logger.getLogger(EmailServiceImpl.class);
 
-	public static void main(String[] args) {
-		Properties emailprop = new Properties();
-		InputStream input;
-		try {
-			input = new FileInputStream("G:\\PARKING-DEMO\\PROJECT\\RUNNING\\SANTA-RITA\\SANTA-RITA\\src\\main\\resources\\"
-					+ "email.properties");
-			User user = new User();
-			user.setEmail("rgrajeshu@gmail.com");
-			emailprop.load(input);
-			new EmailServiceImpl().sentEmail(user, "", emailprop);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-	}
+//	public static void main(String[] args) {
+//		Properties emailprop = new Properties();
+//		InputStream input;
+//		try {
+//			input = new FileInputStream("G:\\PARKING-DEMO\\PROJECT\\RUNNING\\SANTA-RITA\\SANTA-RITA\\src\\main\\resources\\"
+//					+ "email.properties");
+//			User user = new User();
+//			user.setEmail("rgrajeshu@gmail.com");
+//			emailprop.load(input);
+//			new EmailServiceImpl().sentEmail(user, "", emailprop);
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		
+//	}
 	
 	public Integer sentEmail(User user, String confirmUrl, Properties emailprop) {
 
